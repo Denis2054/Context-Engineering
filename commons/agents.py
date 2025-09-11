@@ -79,9 +79,15 @@ def agent_writer(mcp_message, client, generation_model):
     """Combines research with a blueprint to generate the final output."""
     logging.info("[Writer] Activated. Applying blueprint to source material...")
     try:
-        blueprint_json_string = mcp_message['content'].get('blueprint')
-        facts = mcp_message['content'].get('facts')
-        previous_content = mcp_message['content'].get('previous_content')
+        # --- FIX: Unpack the structured inputs from previous steps ---
+        blueprint_data = mcp_message['content'].get('blueprint')
+        facts_data = mcp_message['content'].get('facts')
+        previous_content_data = mcp_message['content'].get('previous_content')
+
+        # Extract the actual strings, handling both dict and raw string inputs
+        blueprint_json_string = blueprint_data.get('blueprint_json') if isinstance(blueprint_data, dict) else blueprint_data
+        facts = facts_data.get('facts') if isinstance(facts_data, dict) else facts_data
+        previous_content = previous_content_data # Assuming this is already a string if provided
 
         if not blueprint_json_string:
             raise ValueError("Writer requires 'blueprint' in the input content.")
