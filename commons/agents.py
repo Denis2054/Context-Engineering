@@ -6,7 +6,7 @@
 # AND namespaces) as arguments, making the agents fully self-contained and
 # removing all reliance on global variables.
 # -------------------------------------------------------------------------
-
+import logging 
 # === 4.1. Context Librarian Agent (Upgraded) ===
 # *** Added 'namespace_context' argument ***
 def agent_context_librarian(mcp_message, client, index, embedding_model, namespace_context):
