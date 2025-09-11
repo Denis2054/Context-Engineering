@@ -93,7 +93,7 @@ EXAMPLE OUTPUT FORMAT:
             plan = plan_data["plan"]
         else:
             logging.error(f"Planner returned an unexpected JSON structure. Response: {plan_data}")
-            raise ValueError("The extracted JSON does not conform to the expected {'plan': [...]} structure.")
+            raise ValueError("The extracted JSON does not conform to the expected {{'plan': [...]}} structure.")
 
         if not plan:
             raise ValueError("The generated plan is empty.")
