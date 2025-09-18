@@ -50,6 +50,4 @@ You can run the notebooks directly from the table below:
 | <ul><li>Context_Engine_MAS_MCP.ipynb</li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter05/Context_Engine_MAS_MCP.ipynb) |
 | <ul><li>Context_Engine_Pre_Production.ipynb/li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter05/Context_Engine_Pre_Production.ipynb) |
  **Chapter 10 The Blueprint for Production-Ready AI**
-<a href="https://github.com/Denis2054/Context-Engineering/blob/main/Chapter10/context_engineering_blueprint.svg?raw=true" target="_blank" rel="noopener noreferrer">
-  View the Grand Blueprint: The Complete Context Engine Journey
-</a>
+[View the Grand Blueprint: The Complete Context Engine Journey](https://github.com/Denis2054/Context-Engineering/blob/main/Chapter10/context_engineering_blueprint.svg?raw=true)
