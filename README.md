@@ -3,7 +3,7 @@
 by Denis Rothman <br><br>
 <img src="https://github.com/Denis2054/Context-Engineering/blob/main/context_engineering.png?raw=tru" alt="drawing" width="400"/>
 
-Last updated: September 18, 2025     
+Last updated: September 19, 2025     
 📝 For details on updates and improvements, see the [Changelog](./CHANGELOG.md).   
 
 🚩If you see anything that doesn't run as expected, raise an issue, and we'll work on it!   
@@ -49,5 +49,7 @@ You can run the notebooks directly from the table below:
  **Chapter 5: From Prototype to Production: Hardening the Context Engine**
 | <ul><li>Context_Engine_MAS_MCP.ipynb</li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter05/Context_Engine_MAS_MCP.ipynb) |
 | <ul><li>Context_Engine_Pre_Production.ipynb/li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter05/Context_Engine_Pre_Production.ipynb) |
+ **Chapter 6 The Art of Context Reduction: The Summarizer Agent**
+| <ul><li>Context_Engine_Content_Reduction.ipynb</li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter06/Context_Engine_Content_Reduction.ipynb) |
  **Chapter 10 The Blueprint for Production-Ready AI**
 [View the Grand Blueprint: The Complete Context Engine Journey](https://github.com/Denis2054/Context-Engineering/blob/main/Chapter10/context_engineering_blueprint.svg?raw=true)
