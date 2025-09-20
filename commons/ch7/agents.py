@@ -106,33 +106,43 @@ def agent_researcher(mcp_message, client, index, generation_model, embedding_mod
         logging.error(f"[Researcher] An error occurred: {e}")
         raise e
 
-# === 4.3. Writer Agent (Upgraded) ===
+# FILE: commons/ch6/agents.py (UPGRADED agent_writer)
+
 def agent_writer(mcp_message, client, generation_model):
     """Combines research with a blueprint to generate the final output."""
     logging.info("[Writer] Activated. Applying blueprint to source material...")
     try:
-        # --- FIX: Unpack the structured inputs from previous steps ---
+        # --- UPGRADE: Unpack structured inputs with added flexibility ---
         blueprint_data = mcp_message['content'].get('blueprint')
         facts_data = mcp_message['content'].get('facts')
-        previous_content_data = mcp_message['content'].get('previous_content')
+        previous_content = mcp_message['content'].get('previous_content')
 
-        # Extract the actual strings, handling both dict and raw string inputs
+        # Extract the blueprint string, same as before
         blueprint_json_string = blueprint_data.get('blueprint_json') if isinstance(blueprint_data, dict) else blueprint_data
-        facts = facts_data.get('facts') if isinstance(facts_data, dict) else facts_data
-        previous_content = previous_content_data # Assuming this is already a string if provided
 
-        if not blueprint_json_string:
-            raise ValueError("Writer requires 'blueprint' in the input content.")
+        # NEW ROBUST LOGIC for handling 'facts' or 'summary'
+        facts = None
+        if isinstance(facts_data, dict):
+            # First, try to get 'facts' (from Researcher)
+            facts = facts_data.get('facts')
+            # If that fails, try to get 'summary' (from Summarizer)
+            if facts is None:
+                facts = facts_data.get('summary')
+        elif isinstance(facts_data, str):
+            facts = facts_data
 
+        if not blueprint_json_string or (not facts and not previous_content):
+            raise ValueError("Writer requires a blueprint and either 'facts' or 'previous_content'.")
+
+        # Determine the source material and label for the prompt
         if facts:
             source_material = facts
-            source_label = "RESEARCH FINDINGS"
-        elif previous_content:
+            source_label = "SOURCE FACTS"
+        else: # The validation above ensures that if 'facts' is None, 'previous_content' must exist
             source_material = previous_content
             source_label = "PREVIOUS CONTENT (For Rewriting)"
-        else:
-            raise ValueError("Writer requires either 'facts' or 'previous_content'.")
 
+        # Construct the prompts for the LLM
         system_prompt = f"""You are an expert content generation AI.
 Your task is to generate content based on the provided SOURCE MATERIAL.
 Crucially, you MUST structure, style, and constrain your output according to the following SEMANTIC BLUEPRINT.
@@ -142,19 +152,24 @@ Crucially, you MUST structure, style, and constrain your output according to the
 --- END SEMANTIC BLUEPRINT ---
 
 Adhere strictly to the blueprint's instructions, style guides, and goals."""
+
         user_prompt = f"""--- SOURCE MATERIAL ({source_label}) ---
 {source_material}
 --- END SOURCE MATERIAL ---
 
 Generate the content now, following the blueprint precisely."""
 
+        # Call the hardened LLM helper to generate the final output
         final_output = call_llm_robust(
             system_prompt,
             user_prompt,
             client=client,
             generation_model=generation_model
         )
+        
+        # Return the final content in a standard MCP message
         return create_mcp_message("Writer", final_output)
+        
     except Exception as e:
         logging.error(f"[Writer] An error occurred: {e}")
         raise e
