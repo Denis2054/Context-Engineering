@@ -106,7 +106,9 @@ def agent_researcher(mcp_message, client, index, generation_model, embedding_mod
         logging.error(f"[Researcher] An error occurred: {e}")
         raise e
 
+# === 4.2. Agent writer upgraded for Chapter 7 ===
 # FILE: commons/ch6/agents.py (UPGRADED agent_writer)
+# FILE: commons/ch7/agents.py (FINAL UPGRADED agent_writer)
 
 def agent_writer(mcp_message, client, generation_model):
     """Combines research with a blueprint to generate the final output."""
@@ -127,7 +129,7 @@ def agent_writer(mcp_message, client, generation_model):
             # Check for 'summary' (from Summarizer)
             if facts is None:
                 facts = facts_data.get('summary')
-            # Check for 'answer_with_sources' (from Hi-Fi Researcher)
+            # NEW: Check for 'answer_with_sources' (from Hi-Fi Researcher)
             if facts is None:
                 facts = facts_data.get('answer_with_sources')
         elif isinstance(facts_data, str):
@@ -136,7 +138,7 @@ def agent_writer(mcp_message, client, generation_model):
         if not blueprint_json_string or (not facts and not previous_content):
             raise ValueError("Writer requires a blueprint and either 'facts' or 'previous_content'.")
 
-        # ... (The rest of the agent function remains the same) ...
+        # ... (The rest of the agent function proceeds as before) ...
         
         if facts:
             source_material = facts
