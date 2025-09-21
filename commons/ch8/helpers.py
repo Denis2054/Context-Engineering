@@ -130,6 +130,35 @@ def helper_sanitize_input(text):
     logging.info("[Sanitizer] Input passed sanitization check.")
     return text
 
+# FILE: commons/ch8/helpers.py
+# === Moderation Utility (New for Chapter 8) ===
+def helper_moderate_content(text_to_moderate, client):
+    """
+    Uses the OpenAI Moderation API to check if content is flagged and returns a full report.
+    """
+    logging.info(f"Moderating content...")
+    try:
+        response = client.moderations.create(input=text_to_moderate)
+        mod_result = response.results[0]
+        
+        report = {
+            "flagged": mod_result.flagged,
+            "categories": dict(mod_result.categories),
+            "scores": dict(mod_result.category_scores)
+        }
+        
+        if report["flagged"]:
+            logging.warning(f"Content was FLAGGED by moderation API. Report: {report['categories']}")
+        else:
+            logging.info("Content PASSED moderation.")
+            
+        return report
+            
+    except Exception as e:
+        logging.error(f"An error occurred during content moderation: {e}")
+        # Fail safe: if we can't check it, we assume it's not safe.
+        return {"flagged": True, "categories": {"error": str(e)}, "scores": {}}
+
 logging.info("✅ Helper functions defined and upgraded.")
 
 
