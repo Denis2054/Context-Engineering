@@ -60,6 +60,8 @@ You can run the notebooks directly from the table below:
  **Chapter 9 Architecting for Brand and Agility: The Strategic Marketing Engine**
 | <ul><li>Data_Ingestion_Marketing.ipynb</li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter09/Data_Ingestion_Marketing.ipynb) |
 | <ul><li>Marketing_Assistant.ipynb</li></ul>|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Denis2054/Context-Engineering/blob/main/Chapter09/Marketing_Assistant.ipynb) |
+Note for Author: The last example for brand pitch may run or not as expected (stochastic LLM): add explanation in Chapter during review
  **Chapter 10 The Blueprint for Production-Ready AI**
 A visual blueprint to implement the Context Engine(existing and new functions to build)
 [View the Grand Blueprint: The Complete Context Engine Journey](https://github.com/Denis2054/Context-Engineering/blob/main/Chapter10/context_engineering_blueprint.svg?raw=true)
+Note for Author: Latency issues are being resolved by major chip manufactures such as NVIDIA (see H100) that are integrating powerful AI boosters. Add an explanation in the Chapter during review.
