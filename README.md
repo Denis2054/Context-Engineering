@@ -164,14 +164,5 @@ _Denis Rothman_ graduated from Sorbonne University and Paris-Diderot University,
 
 
 # Note
-
-Last updated: September 22, 2025     
-📝 For details on updates and improvements, see the [Changelog](./CHANGELOG.md).   
-
-🚩If you see anything that doesn't run as expected, raise an issue, and we'll work on it!   
-
-    
-Look for 🐬 to explore *new bonus notebooks* such as ...
-Look for 🎏 to explore existing notebooks for the *latest model or platform releases*, such as....  
-Look for 🛠 to run existing notebooks with *new dependency versions and platform API constraints and tweaks.*
-
+Last updated: November 7, 2025     
+See the [Changelog](./CHANGELOG.md) for details. 
