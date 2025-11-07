@@ -144,7 +144,9 @@ Create a GitHub or local workspace containing at least:
 - Familiarity with **RAG workflows** and **MCP-based agent orchestration** is recommended.
 - Refer to **Appendix: Context Engine Reference Guide** for quick lookup of component structures and explanations.
   </details>
-    
+
+<details open> 
+  <summary><h2>About the Author</summary>
  
 ### ✅ Get to know Author
 _Denis Rothman_ graduated from Sorbonne University and Paris-Diderot University, designing one of the very first word2matrix patented embedding and patented AI conversational agents. He began his career authoring one of the first AI cognitive Natural Language Processing (NLP) chatbots applied as an automated language teacher for Moet et Chandon and other companies. He authored an AI resource optimizer for IBM and apparel producers. He then authored an Advanced Planning and Scheduling (APS) solution used worldwide.
@@ -154,8 +156,12 @@ _Denis Rothman_ graduated from Sorbonne University and Paris-Diderot University,
 
   <li><a href="https://www.packtpub.com/en-us/product/building-business-ready-generative-ai-systems-9781837020683">Building Business-Ready Generative AI Systems, First Edition</a></li>
 
-  <li><a href='https://www.packtpub.com/en-us/product/rag-driven-generative-ai-9781836200901' >RAG-Drive Generative AI, First Edition</a></li>
+  <li><a href="https://www.packtpub.com/en-us/product/rag-driven-generative-ai-9781836200901">RAG-Drive Generative AI, First Edition</a></li>
+
+  <li><a href="https://www.packtpub.com/en-us/product/transformers-for-natural-language-processing-and-computer-vision-9781805123743">Transformers for Natural Language Processing and Computer Vision, Third Edition</a></li>
  
 </ul>
+
+</details>
 
 </details>
