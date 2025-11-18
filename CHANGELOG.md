@@ -8,6 +8,7 @@ This changelog contains the notable updates to the **Context Enginnering for Mul
 
 ### List of notebooks upgraded    
 `Chapter01/Use_Case.ipynb`    
+`Chapter01MAS_MCP_control.ipynb`
 `Chapter03/Context_Aware_MAS.ipynb`     
 `Chapter05/Context_Engine_MAS_MCP.ipynb`     
 `Chapter05/Context_Engine_Pre_Production.ipynb`    
