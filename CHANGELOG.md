@@ -6,15 +6,15 @@ This changelog contains the notable updates to the **Context Enginnering for Mul
 
 ## [November 18, 2025]
 
-### List of notebooks upgraded
-`Chapter05/Context_Engine_MAS_MCP.ipynb` 
-`Chapter05/Context_Engine_Pre_Production.ipynb` 
-`Chapter06/Context_Engine_Content_Reduction.ipynb` 
-`Chapter07/NASA_Research_Assistant_and_Retrocompatibility.ipynb`     
+### List of notebooks upgraded    
+`Chapter05/Context_Engine_MAS_MCP.ipynb`     
+`Chapter05/Context_Engine_Pre_Production.ipynb`    
+`Chapter06/Context_Engine_Content_Reduction.ipynb`    
+`Chapter07/NASA_Research_Assistant_and_Retrocompatibility.ipynb`        
 
-### List of notebooks upgraded and fixed   
-`Chapter08/Legal_assistant_Explorer.ipynb` 
-`Chapter09/Marketing_Assistant.ipynb` 
+### List of notebooks upgraded and fixed      
+`Chapter08/Legal_assistant_Explorer.ipynb`   
+`Chapter09/Marketing_Assistant.ipynb`    
 
 ### Upgraded
 **GPT 5:** 
